@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/jeopardy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/basic_padding"
+        android:layout_marginTop="@dimen/basic_padding"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/basic_padding"
+        android:text="Jeopardy"
+        android:textSize="@dimen/game_types"/>
+
+    <TextView
+        android:id="@+id/double_jeopardy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/basic_padding"
+        android:gravity="center"
+        android:padding="@dimen/basic_padding"
+        android:text="Double\nJeopardy"
+        android:textSize="@dimen/game_types"/>
+
+    <TextView
+        android:id="@+id/final_jeopardy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/basic_padding"
+        android:gravity="end"
+        android:padding="@dimen/basic_padding"
+        android:text="Final\nJeopardy"
+        android:textSize="@dimen/game_types"/>
+
+    <TextView
+        android:id="@+id/winnings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jeopardy"
+        android:layout_marginBottom="@dimen/basic_padding"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/basic_padding"
+        android:text="0"
+        android:textSize="@dimen/winnings_text"
+        android:textColor="@android:color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/winnings">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/score_values"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/score_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/mid_padding"
+                android:text="200"
+                android:textColor="@color/yellowText"
+                android:textSize="@dimen/score_text"/>
+
+            <Button
+                android:id="@+id/score_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/mid_padding"
+                android:text="400"
+                android:textColor="@color/yellowText"
+                android:textSize="@dimen/score_text"/>
+
+            <Button
+                android:id="@+id/score_3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/mid_padding"
+                android:text="600"
+                android:textColor="@color/yellowText"
+                android:textSize="@dimen/score_text"/>
+
+            <Button
+                android:id="@+id/score_4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/mid_padding"
+                android:text="800"
+                android:textColor="@color/yellowText"
+                android:textSize="@dimen/score_text"/>
+
+            <Button
+                android:id="@+id/score_5"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/mid_padding"
+                android:text="1000"
+                android:textColor="@color/yellowText"
+                android:textSize="@dimen/score_text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@id/winnings">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:id="@+id/final_jeopardy_wager">
+
+            <EditText
+                android:id="@+id/wager"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:hint="Enter Wager"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/yellowText"
+                android:textColorHint="@color/whiteText"
+                android:textSize="@dimen/wager_text"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wager"
+                android:id="@+id/submit_wager"
+                android:text="Submit Wager"
+                android:textColor="@color/whiteText"
+                android:textSize="@dimen/buttons"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/submit_wager" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/submit_wager">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Right"
+                    android:id="@+id/correct"
+                    android:textColor="@color/whiteText"
+                    android:textSize="@dimen/buttons"/>
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wrong"
+                    android:id="@+id/incorrect"
+                    android:textColor="@color/whiteText"
+                    android:textSize="@dimen/buttons"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/stats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/basic_padding"
+        android:gravity="end"
+        android:padding="@dimen/mid_padding"
+        android:text="Stats"
+        android:textSize="@dimen/other_views"/>
+
+
+</RelativeLayout>

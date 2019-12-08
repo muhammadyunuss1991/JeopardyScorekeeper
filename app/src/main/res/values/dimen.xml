@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Money Box sizing -->
+    <dimen name = "money_height">48dp</dimen>
+    <dimen name = "money_width">40dp</dimen>
+
+    <!-- Spacing -->
+    <dimen name = "basic_padding">16dp</dimen>
+    <dimen name = "mid_padding">24dp</dimen>
+    <dimen name = "extra_padding">32dp</dimen>
+
+    <!-- Text Size -->
+    <dimen name="score_text">16sp</dimen>
+    <dimen name="winnings_text">20sp</dimen>
+    <dimen name="game_types">14sp</dimen>
+    <dimen name="buttons">18sp</dimen>
+    <dimen name="other_views">14sp</dimen>
+    <dimen name="wager_text">18dp</dimen>
+
+
+</resources>
